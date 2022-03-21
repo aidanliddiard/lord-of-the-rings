@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchCharacters } from '../../services/characters';
 
 export default function Characters() {
-  //const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchCharacters('All', '');
       console.log(data);
-      //setCharacters(data);
+      setCharacters(data);
     };
     fetchData();
   }, []);
 
-  return <div>Characters</div>;
+  return (
+    <div>
+      <h3>Characters</h3>
+      {characters.map((character) => (
+        <p key={character.id}>{character.name}</p>
+      ))}
+    </div>
+  );
 }
