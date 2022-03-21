@@ -6,6 +6,7 @@ import './App.css';
 import Characters from './views/Characters/Characters';
 import Main from './views/Main/Main';
 import Header from './components/Header';
+import Films from './views/Films/Films';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/characters">
             <Characters />
+          </Route>
+          <Route path="/films">
+            <Films />
           </Route>
         </Switch>
       </div>
