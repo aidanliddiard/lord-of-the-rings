@@ -7,6 +7,7 @@ import Characters from './views/Characters/Characters';
 import Main from './views/Main/Main';
 import Header from './components/Header';
 import Films from './views/Films/Films';
+import Books from './views/Books/Books';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/films">
             <Films />
+          </Route>
+          <Route path="/books">
+            <Books />
           </Route>
         </Switch>
       </div>
