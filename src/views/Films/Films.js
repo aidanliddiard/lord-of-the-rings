@@ -7,6 +7,7 @@ export default function Films() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchFilms();
+      console.log(data);
       setFilms(data);
     };
     fetchData();
@@ -18,6 +19,7 @@ export default function Films() {
         <div key={film.id}>
           <h5>{film.title}</h5>
           <p>Academy Award Nominations: {film.academy_award_nominations}</p>
+          {/* <img src={'../../../public/films/the-battle-of-the-five-armies.jpeg'} /> */}
         </div>
       ))}
     </div>
